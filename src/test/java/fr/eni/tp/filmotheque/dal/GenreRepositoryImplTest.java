@@ -22,8 +22,8 @@ public class GenreRepositoryImplTest
     private JdbcTemplate jdbcTemplate;
 
     @Test
-    @DisplayName("test findAllPizzas cas plusieurs pizzas existent") //Optionnel
-    public void testFindAllPizzasCasPlusieursPizzas() {
+    @DisplayName("test findAllGenres cas plusieurs genres existent") //Optionnel
+    public void testFindAllGenreCasPlusieursGenres() {
         //AAA
         //Arrange : Préparation du test
 
