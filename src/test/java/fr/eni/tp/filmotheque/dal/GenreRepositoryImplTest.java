@@ -88,4 +88,18 @@ public class GenreRepositoryImplTest
         assertEquals(genre, genre1);
 
     }
+
+    @Test
+    @DisplayName("test modification genre")
+    public void testModificationGenre() {
+        //AAA
+        //Arrange : Préparation du test
+        Genre genre = new Genre(4, "testGenre");
+
+        //Act : Appel de la méthode à tester
+        long idUpdate = genreRepository.updateGenre(genre);
+
+        //Assert : Vérification du résultat du Act
+        assertEquals(genre.getId(), idUpdate);
+    }
 }

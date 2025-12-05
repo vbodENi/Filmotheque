@@ -9,4 +9,5 @@ public interface GenreRepository {
     List<Genre> findAllGenres();
     Genre findGenreById(long id);
     Genre saveGenre(Genre genre);
+    long updateGenre(Genre genre);
 }

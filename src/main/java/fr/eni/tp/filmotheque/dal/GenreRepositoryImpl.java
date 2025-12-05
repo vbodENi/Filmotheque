@@ -71,4 +71,21 @@ public class GenreRepositoryImpl implements GenreRepository
 
         return genre;
     }
+
+    @Override
+    public long updateGenre(Genre genre)
+    {
+        String sql = "update genres SET libelle = ? where id = ?";
+
+        PreparedStatementSetter pss = new PreparedStatementSetter() {
+            @Override public void setValues(PreparedStatement ps) throws SQLException {
+                ps.setString(1, genre.getTitre());
+                ps.setLong(2, genre.getId());
+            } };
+        jdbcTemplate.update(sql,pss );
+
+        long idGenreModif = genre.getId();
+
+        return idGenreModif;
+    }
 }
